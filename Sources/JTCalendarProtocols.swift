@@ -169,9 +169,6 @@ extension JTAppleReusableViewProtocolTrait {
             let framework = NSBundle(forClass: MyPicker.self)
             let bundleURL = framework.URLForResource("MyPicker", withExtension: "bundle")
             let bundle = NSBundle(URL: bundleURL!)!
-            print(podBundle)
-            print(bundleURL)
-            print(bundle3)
             //let viewObject = UINib(nibName: "cellView", bundle: bundle)
             let viewObject = bundle.loadNibNamed("cellView", owner: self, options: [:])
             guard let view = viewObject[0] as? ViewType else {
